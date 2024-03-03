@@ -132,6 +132,7 @@ public class CollectionTask {
             System.out.println("Task 12 - Collection in reverse order  " + reversedArrayList);
             System.out.println("Task 13 - Second largest number in Collection " + secondLargest(arrayList));
             System.out.println("Task 14 - Palindrome test " + isPalindrome(arrayList));
+            // Task 15 is missing, sorry )
             System.out.println("Task 16 - Displaying each item in the ArrayList:");
                 for (int i = 0; i < arrayList.size(); i++) {
                     System.out.println("Item " + (i + 1) + ": " + arrayList.get(i));
