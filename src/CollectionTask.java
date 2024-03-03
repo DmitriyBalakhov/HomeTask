@@ -61,6 +61,7 @@ public class CollectionTask {
     public static boolean containsValue(ArrayList<Integer> collection, int value) {
         return collection.contains(value);
     }
+
     //№10
     private static int countOccurrences(ArrayList<Integer> numbers, int target) {
         int count = 0;
@@ -104,35 +105,6 @@ public class CollectionTask {
         return arrayList.equals(reversedArrayList);
 }
 
-    public class ListPerformanceTest {
-
-        public static void main(String[] args) {
-            List<Integer> arrayList = new ArrayList<>();
-            List<Integer> linkedList = new LinkedList<>();
-
-            // Populate both lists with 1,000,000 elements
-            populateList(arrayList);
-            populateList(linkedList);
-
-            // Measure and compare the time for random access in both lists
-            measureRandomAccessTime(arrayList, "ArrayList");
-            measureRandomAccessTime(linkedList, "LinkedList");
-        }
-        private static void populateList(List<Integer> list) {
-            for (int i = 0; i < 1_000_000; i++) {
-                list.add(i);
-            }
-        }
-        private static void measureRandomAccessTime(List<Integer> list, String listType) {
-            Random random = new Random();
-            int totalAccesses = 100_000;
-            long startTime = System.nanoTime();
-
-            for (int i = 0; i < totalAccesses; i++) {
-                int index = random.nextInt(1_000_000); // Random index for access
-                list.get(index); // Access element at random index
-            }
-
 
             public static void main(String[] args){
             ArrayList<Integer> emptyArrayList = generateArrayList();
@@ -160,7 +132,11 @@ public class CollectionTask {
             System.out.println("Task 12 - Collection in reverse order  " + reversedArrayList);
             System.out.println("Task 13 - Second largest number in Collection " + secondLargest(arrayList));
             System.out.println("Task 14 - Palindrome test " + isPalindrome(arrayList));
+            System.out.println("Task 16 - Displaying each item in the ArrayList:");
+                for (int i = 0; i < arrayList.size(); i++) {
+                    System.out.println("Item " + (i + 1) + ": " + arrayList.get(i));
+                }
+            }
 
 
         }
-    }
